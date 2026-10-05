@@ -35,6 +35,7 @@
             <li><a href="#aydinlatma">Aydınlatma Metni</a> &mdash; KVKK m.10 kapsamında resmî bildirim</li>
             <li><a href="#acik-riza">Açık Rıza Beyanları</a> &mdash; isteğe bağlı iki işleme</li>
             <li><a href="#gdpr">AB/AEA ve Birleşik Krallık kullanıcıları</a> &mdash; GDPR kapsamındaki ek bilgiler</li>
+            <li><a href="#veri-silme">Verilerinizi silme</a> &mdash; silme adımları, neyin silindiği ve saklama süreleri</li>
         </ol>
         <p style="margin:10px 0 0 0; font-size:0.92em;">Uygulamanın kullanım koşulları için: <a href="kullanim-sartlari.html">Kullanım Şartları</a></p>
     </div>
@@ -345,6 +346,83 @@
 
     <h3>4.9. Çocuklar</h3>
     <p>Uygulama çocuklara yönelik değildir ve 13 yaşın altındaki kullanıcılar için tasarlanmamıştır. Bulunduğunuz ülkede rıza için geçerli yaş sınırının altındaysanız, uygulamayı bir ebeveyn veya vasinin onayı olmadan kullanmamalısınız.</p>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 id="veri-silme">5. Verilerinizi silme</h2>
+
+    <p>Bu bölüm, <strong>Bütçe Takip - Gelir Gider</strong> uygulaması
+    (<code>com.makobyte.budget_tracker</code>, geliştirici: Berkay Karlı)
+    için verilerin nasıl silineceğini açıklar.</p>
+
+    <p><strong>Önce bilmeniz gereken:</strong> Uygulama hesap oluşturmanızı
+    gerektirmez ve bir sunucusu yoktur. Girdiğiniz bütün bütçe kayıtları
+    yalnızca kendi telefonunuzda saklanır. Geliştiricinin bu kayıtlara
+    erişimi yoktur ve geliştirici tarafında silinmesi gereken bir
+    hesabınız veya kaydınız bulunmaz. Bu nedenle silme işlemini
+    <strong>doğrudan siz yaparsınız</strong> ve bir talebin
+    onaylanmasını beklemeniz gerekmez.</p>
+
+    <h3>5.1. Verilerinizi uygulama içinden silme (önerilen)</h3>
+    <ol>
+        <li>Uygulamayı açın.</li>
+        <li>Alt menüden <strong>Ayarlar</strong> bölümüne girin.</li>
+        <li><strong>Verileri Sıfırla</strong> seçeneğine dokunun.</li>
+        <li>Çıkan uyarıyı okuyup işlemi onaylayın.</li>
+    </ol>
+    <p>Bu işlem geri alınamaz ve tamamlandığı anda etkili olur.</p>
+
+    <h3>5.2. Uygulamayı kaldırarak silme</h3>
+    <p>Uygulamayı telefonunuzdan kaldırmanız da cihazda saklanan tüm
+    verileri siler. Google hesabınızda bir yedek oluşmuşsa onun için
+    5.5'e bakınız.</p>
+
+    <h3>5.3. Hangi veriler silinir?</h3>
+    <p>Yukarıdaki iki yöntemden biriyle şunların <strong>tamamı</strong>
+    silinir:</p>
+    <ul>
+        <li>Gelir ve gider kayıtlarınız</li>
+        <li>Hesaplarınız, bakiyeleriniz ve işlem defteriniz</li>
+        <li>Altın ve döviz varlık kayıtlarınız</li>
+        <li>Abonelikleriniz, kredileriniz ve tekrarlayan kayıtlarınız</li>
+        <li>Kendi oluşturduğunuz kategoriler ve limitler</li>
+        <li>Uygulama ayarlarınız ve tercihleriniz</li>
+        <li>Cihazda tutulan teknik hata kaydı</li>
+        <li>Dışa aktarma sırasında oluşmuş geçici dosyalar</li>
+    </ul>
+
+    <h3>5.4. Geliştirici tarafında saklanan veri ve saklama süresi</h3>
+    <p><strong>Geliştirici tarafında saklanan hiçbir veriniz yoktur;</strong>
+    dolayısıyla silme sonrası ek bir saklama süresi de yoktur. Sunucu,
+    kullanıcı hesabı veya kullanıcı veritabanı bulunmamaktadır.</p>
+    <p>Bize e-posta ile bir talep iletirseniz, yalnızca yazışmanın kendisi
+    (e-posta adresiniz ve mesajınız) e-posta kutumuzda kalır. Bu
+    yazışmayı talebiniz sonuçlandıktan sonra en geç <strong>12 ay</strong>
+    içinde sileriz; daha erken silinmesini isterseniz aynı adrese
+    yazmanız yeterlidir.</p>
+
+    <h3>5.5. Google yedeğiniz</h3>
+    <p>Android, cihaz ayarlarınıza bağlı olarak uygulama verilerinin bir
+    kopyasını <strong>sizin kendi Google hesabınıza</strong> yedekleyebilir.
+    Bu yedek bizde değil, Google'da ve sizin hesabınızda durur. Silmek
+    için: telefonunuzun <em>Ayarlar &gt; Google &gt; Yedekleme</em>
+    bölümünden ya da Google hesabınızın yedekleme ayarlarından ilgili
+    yedeği kaldırabilirsiniz.</p>
+
+    <h3>5.6. Reklam verileri</h3>
+    <p>Uygulamada reklam gösterimi için kullanılan Android Reklam Kimliği
+    bizim değil <strong>Google</strong>'ın kontrolündedir. Bu kimliği
+    telefonunuzun <em>Ayarlar &gt; Google &gt; Reklamlar</em> bölümünden
+    sıfırlayabilir veya reklam takibini tamamen kapatabilirsiniz.
+    Reklam onayınızı uygulama içinden <em>Ayarlar &gt; Reklam
+    Tercihleri</em> bölümünden değiştirebilirsiniz. AB/AEA ve Birleşik
+    Krallık kullanıcıları için ayrıntılar
+    <a href="#gdpr">4. bölümdedir</a>.</p>
+
+    <h3>5.7. Yardım</h3>
+    <p>Silme işleminde sorun yaşarsanız
+    <a href="mailto:makobyte@hotmail.com">makobyte@hotmail.com</a>
+    adresine yazabilirsiniz. Talebinizi en geç <strong>30 gün</strong>
+    içinde yanıtlarız.</p>
 
     <!-- ═══════════════════════════════════════════════════ -->
     <h2>İletişim</h2>
