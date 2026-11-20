@@ -1,16 +1,22 @@
 # Hukuki Belgeler
 
-Bütçe Takip uygulamasının yayın belgeleri. **İki dosya yüklenir**, ikisi de
-**aynı dizine** — aralarındaki bağlantılar göreli.
+Bütçe Takip uygulamasının yayın belgeleri. **Dört dosya yüklenir** (her
+dilde iki), hepsi **aynı dizine** — aralarındaki bağlantılar göreli.
 
 | Dosya | İçerik |
 |---|---|
-| `gizlilik-politikasi.html` | Üç belge tek sayfada: gizlilik politikası, aydınlatma metni (`#aydinlatma`), açık rıza beyanları (`#acik-riza`). Play Store'a verilen URL bu olmalı. |
-| `kullanim-sartlari.html` | Sorumluluk sınırları, garanti reddi, uyuşmazlık çözümü. Gizlilik belgesi değil, sözleşme olduğu için ayrı tutuldu. |
+| `gizlilik-politikasi.html` | **Esas metin.** Gizlilik politikası, aydınlatma metni (`#aydinlatma`), açık rıza beyanları (`#acik-riza`), GDPR (`#gdpr`), veri silme (`#veri-silme`). Play Store'a verilen URL bu. |
+| `kullanim-sartlari.html` | Sorumluluk sınırları, garanti reddi, uyuşmazlık çözümü. |
+| `privacy-policy.html` | Gizlilik politikasının İngilizce çevirisi (`#disclosure`, `#consent`, `#gdpr`, `#data-deletion`). "Çelişkide Türkçe esas" der. |
+| `terms-of-use.html` | Kullanım şartlarının İngilizce çevirisi. Aynı not. |
 
-Uygulama **dört ayrı adres** açar; ikisi aynı sayfanın çapalarına gider.
-Eşleşme [`lib/config/legal_links.dart`](../lib/config/legal_links.dart)
-dosyasında.
+Uygulama **dört ayrı adres** açar ve hangi dildeki sayfayı açacağını
+uygulama dilinden seçer. Eşleşme
+[`lib/config/legal_links.dart`](../lib/config/legal_links.dart) dosyasında;
+çapaların ve göreli bağlantıların var olduğunu `hukuki_metin_test.dart`
+denetliyor. **Türkçe metin değişirse İngilizce de aynı gün değişir** — test
+başlık, madde ve tablo satırı sayılarını karşılaştırıyor ama cümlenin
+anlamını göremez.
 
 Belgeler koddaki gerçek davranışla satır satır karşılaştırılarak yazıldı.
 
@@ -62,27 +68,16 @@ Kullanım Şartları, Lisanslar. Adresler tek yerden yönetiliyor:
 
 ---
 
-## ⛔ Kalan tek engel: belgeler henüz yayında değil
-
-Uygulama içindeki bağlantılar aşağıdaki adresleri açıyor ama oraya hâlâ
-**15 Haziran tarihli eski metin** yüklü. Dört belgeyi de yüklemeden
-yayınlanmamalı.
-
 ## Yayınlarken
 
-1. İki dosyayı da **aynı dizine** yükleyin — aralarındaki bağlantılar göreli.
-2. Dosya adlarını ve `#aydinlatma` / `#acik-riza` çapa kimliklerini
-   **değiştirmeyin**. Uygulama bunlara bağlı:
-   [`lib/config/legal_links.dart`](../lib/config/legal_links.dart)
-   Adres değişirse yalnızca o dosyadaki `_base` güncellenir.
-3. Yükledikten sonra dört adresi de tarayıcıda açıp doğrulayın — özellikle
-   çapalı olanların doğru bölüme atladığını.
-4. Eski taslakları siteden **silin**. Yayında kalan güncel olmayan bir
-   gizlilik metni arama motorlarınca indekslenir ve ileride yanlış belgeye
-   bakılmasına yol açar.
-4. Play Console'daki **Veri Güvenliği (Data Safety)** formunu bu belgelerle
-   tutarlı doldurun. Özellikle bildirim erişimi izni için Play'in ayrı bir
-   beyan/gerekçe istediğini kontrol edin.
+1. Dört dosyayı da **aynı dizine** yükleyin ve **AAB'den ÖNCE** yükleyin
+   (uygulama yayına çıktığı an bu adresleri açar).
+2. Dosya adlarını ve çapa kimliklerini **değiştirmeyin**; uygulama bunlara
+   bağlı. Adres değişirse yalnızca `legal_links.dart` içindeki `_base`.
+3. Yükledikten sonra sekiz adresi (iki dil × dört) tarayıcıda açıp
+   doğrulayın — özellikle çapalı olanların doğru bölüme atladığını.
+4. Play Console'daki **Veri Güvenliği** formunu bu belgelerle tutarlı
+   tutun.
 
 ---
 
